@@ -1,0 +1,309 @@
+\hypertarget{classimage__tools_1_1MIACommandlineManager}{}\section{image\+\_\+tools\+:\+:M\+I\+A\+Commandline\+Manager Class Reference}
+\label{classimage__tools_1_1MIACommandlineManager}\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+
+
+the M\+IA command line managger class definition  
+
+
+
+
+{\ttfamily \#include $<$mia\+\_\+commandline\+\_\+manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classimage__tools_1_1MIACommandlineManager_ad6bc053325dbe81667f85667dd1fdbf9}{parse} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Will check and perform all of the requested actions from commandline arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classimage__tools_1_1MIACommandlineManager_aac75fffa612779a332de31e4cfe8d4fc}{is\+\_\+valid\+\_\+flags} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Will parse through the commandline arguments looking for errors. \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1MIACommandlineManager_aae4bae8a16d283fdc81a50f7bf9fb415}{perform\+\_\+flags} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Will perform all of the requested actions from commandline arguments. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1MIACommandlineManager_a6dfb9e4962301d2860e7e5d878c85e83}{usage} (const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Will print out Usage statement and error (if any) that caused the usage statement to be printed out. \end{DoxyCompactList}\item 
+Input\+Type \hyperlink{classimage__tools_1_1MIACommandlineManager_a3a39d94de32b536aa59d52311e7db427}{flag\+\_\+input\+\_\+type} (char $\ast$input)
+\begin{DoxyCompactList}\small\item\em Will determine the type of the argument given in commandline. \end{DoxyCompactList}\item 
+bool \hyperlink{classimage__tools_1_1MIACommandlineManager_ab9049b7cd3d1e80d83a08908c078b2c5}{is\+\_\+valid\+\_\+image\+\_\+file} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Will determine if this is an existing file. \end{DoxyCompactList}\item 
+bool \hyperlink{classimage__tools_1_1MIACommandlineManager_a25c93b7f74b68fb88586065d7ea3dffe}{is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Will determine if this is a valid file name so it can be created or edited. \end{DoxyCompactList}\item 
+bool \hyperlink{classimage__tools_1_1MIACommandlineManager_a5b890fca7c4d82969a988f559856e453}{has\+\_\+suffix} (const std\+::string \&str, const std\+::string \&suffix)
+\begin{DoxyCompactList}\small\item\em Determine if a file name contains a give suffix. \end{DoxyCompactList}\item 
+bool \hyperlink{classimage__tools_1_1MIACommandlineManager_a9494f1e26c810e4c74413ff9ee921d06}{is\+\_\+seq} (const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Determines if file name is fits the following pattern\+: $<$sequence name$>$=\char`\"{}\char`\"{}$>$\#\#\#.$<$extension$>$ \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1MIACommandlineManager_afa5690c9e62a1c5e1df8fdeef907df70}{add\+\_\+in\+\_\+out\+\_\+file\+\_\+names} (char $\ast$in\+\_\+file\+\_\+names, char $\ast$out\+\_\+file\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Determines if file name is fits the following pattern\+: $<$sequence name$>$=\char`\"{}\char`\"{}$>$\#\#\#.$<$extension$>$ \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classimage__tools_1_1MIACommandlineManager_ae511c474da37d2ae793b92a2ec3bb567}{image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset} (const std\+::string \&filename, int offset)
+\begin{DoxyCompactList}\small\item\em Will produce filename with desired three digit ending. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FilterFactory}{Filter\+Factory} \hyperlink{classimage__tools_1_1MIACommandlineManager_a4b3fc983d2020e89631feff967a50039}{filter\+\_\+manager\+\_\+}\hypertarget{classimage__tools_1_1MIACommandlineManager_a4b3fc983d2020e89631feff967a50039}{}\label{classimage__tools_1_1MIACommandlineManager_a4b3fc983d2020e89631feff967a50039}
+
+\begin{DoxyCompactList}\small\item\em Manager for all filter operations. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ImageHandler}{Image\+Handler} \hyperlink{classimage__tools_1_1MIACommandlineManager_a6668bb99b6c6b24a2da572babd136fa0}{io\+\_\+handler\+\_\+}\hypertarget{classimage__tools_1_1MIACommandlineManager_a6668bb99b6c6b24a2da572babd136fa0}{}\label{classimage__tools_1_1MIACommandlineManager_a6668bb99b6c6b24a2da572babd136fa0}
+
+\begin{DoxyCompactList}\small\item\em Handler for all I/O operations. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ \hyperlink{classimage__tools_1_1MIACommandlineManager_a77553a1c2f41c056ea252fbe467c2dd2}{display\+\_\+buffer\+\_\+}\hypertarget{classimage__tools_1_1MIACommandlineManager_a77553a1c2f41c056ea252fbe467c2dd2}{}\label{classimage__tools_1_1MIACommandlineManager_a77553a1c2f41c056ea252fbe467c2dd2}
+
+\begin{DoxyCompactList}\small\item\em Canvas to hold all incoming images while being edited. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classimage__tools_1_1MIACommandlineManager_ad0285416643242c438f94d21be0d65a7}{in\+\_\+file\+\_\+names\+\_\+}\hypertarget{classimage__tools_1_1MIACommandlineManager_ad0285416643242c438f94d21be0d65a7}{}\label{classimage__tools_1_1MIACommandlineManager_ad0285416643242c438f94d21be0d65a7}
+
+\begin{DoxyCompactList}\small\item\em List of input files in order holding images to be edited. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classimage__tools_1_1MIACommandlineManager_aaf628518263df09846d180991c5f67b9}{out\+\_\+file\+\_\+names\+\_\+}\hypertarget{classimage__tools_1_1MIACommandlineManager_aaf628518263df09846d180991c5f67b9}{}\label{classimage__tools_1_1MIACommandlineManager_aaf628518263df09846d180991c5f67b9}
+
+\begin{DoxyCompactList}\small\item\em List of all output files in order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the M\+IA command line managger class definition 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!add\+\_\+in\+\_\+out\+\_\+file\+\_\+names@{add\+\_\+in\+\_\+out\+\_\+file\+\_\+names}}
+\index{add\+\_\+in\+\_\+out\+\_\+file\+\_\+names@{add\+\_\+in\+\_\+out\+\_\+file\+\_\+names}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{add\+\_\+in\+\_\+out\+\_\+file\+\_\+names(char $\ast$in\+\_\+file\+\_\+names, char $\ast$out\+\_\+file\+\_\+names)}{add_in_out_file_names(char *in_file_names, char *out_file_names)}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::add\+\_\+in\+\_\+out\+\_\+file\+\_\+names (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+file\+\_\+names, }
+\item[{char $\ast$}]{out\+\_\+file\+\_\+names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_afa5690c9e62a1c5e1df8fdeef907df70}{}\label{classimage__tools_1_1MIACommandlineManager_afa5690c9e62a1c5e1df8fdeef907df70}
+
+
+Determines if file name is fits the following pattern\+: $<$sequence name$>$=\char`\"{}\char`\"{}$>$\#\#\#.$<$extension$>$ 
+
+Will fill in\+\_\+file\+\_\+names\+\_\+ with the individual filenames for files to be loads and out\+\_\+file\+\_\+names with the corresponding output filenames. N\+O\+TE\+: Both params must be valid sequence names.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+file\+\_\+names} & The sequence name that describes the input files \\
+\hline
+{\em out\+\_\+file\+\_\+names} & The sequence name that describes the output files \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of files added to in\+\_\+file\+\_\+names\+\_\+, -\/1 for invalid sequence names 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!flag\+\_\+input\+\_\+type@{flag\+\_\+input\+\_\+type}}
+\index{flag\+\_\+input\+\_\+type@{flag\+\_\+input\+\_\+type}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{flag\+\_\+input\+\_\+type(char $\ast$input)}{flag_input_type(char *input)}}]{\setlength{\rightskip}{0pt plus 5cm}Input\+Type image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::flag\+\_\+input\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_a3a39d94de32b536aa59d52311e7db427}{}\label{classimage__tools_1_1MIACommandlineManager_a3a39d94de32b536aa59d52311e7db427}
+
+
+Will determine the type of the argument given in commandline. 
+
+Determines whether or not argument given is a float, int or other.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & A char array that holds argument in question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type of input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!has\+\_\+suffix@{has\+\_\+suffix}}
+\index{has\+\_\+suffix@{has\+\_\+suffix}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{has\+\_\+suffix(const std\+::string \&str, const std\+::string \&suffix)}{has_suffix(const std::string &str, const std::string &suffix)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::has\+\_\+suffix (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str, }
+\item[{const std\+::string \&}]{suffix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_a5b890fca7c4d82969a988f559856e453}{}\label{classimage__tools_1_1MIACommandlineManager_a5b890fca7c4d82969a988f559856e453}
+
+
+Determine if a file name contains a give suffix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string being tested for suffix \\
+\hline
+{\em suffix} & the suffix being searched for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if yes, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset@{image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset}}
+\index{image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset@{image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset(const std\+::string \&filename, int offset)}{image_name_plus_seq_offset(const std::string &filename, int offset)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::image\+\_\+name\+\_\+plus\+\_\+seq\+\_\+offset (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_ae511c474da37d2ae793b92a2ec3bb567}{}\label{classimage__tools_1_1MIACommandlineManager_ae511c474da37d2ae793b92a2ec3bb567}
+
+
+Will produce filename with desired three digit ending. 
+
+This takes sequence file name and produces a filename with the offset ending.
+
+So $<$sequence name$>$=\char`\"{}\char`\"{}$>$\#\#\#.$<$extension$>$ =$>$ $<$sequence name$>$=\char`\"{}\char`\"{}$>$offset.$<$extension$>$
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of potential sequence filename \\
+\hline
+{\em offset} & the offset in the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if yes, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!is\+\_\+seq@{is\+\_\+seq}}
+\index{is\+\_\+seq@{is\+\_\+seq}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{is\+\_\+seq(const std\+::string \&file\+\_\+name)}{is_seq(const std::string &file_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::is\+\_\+seq (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_a9494f1e26c810e4c74413ff9ee921d06}{}\label{classimage__tools_1_1MIACommandlineManager_a9494f1e26c810e4c74413ff9ee921d06}
+
+
+Determines if file name is fits the following pattern\+: $<$sequence name$>$=\char`\"{}\char`\"{}$>$\#\#\#.$<$extension$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & the name of potential sequence filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if yes, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!is\+\_\+valid\+\_\+flags@{is\+\_\+valid\+\_\+flags}}
+\index{is\+\_\+valid\+\_\+flags@{is\+\_\+valid\+\_\+flags}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid\+\_\+flags(int argc, char $\ast$$\ast$argv)}{is_valid_flags(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::is\+\_\+valid\+\_\+flags (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_aac75fffa612779a332de31e4cfe8d4fc}{}\label{classimage__tools_1_1MIACommandlineManager_aac75fffa612779a332de31e4cfe8d4fc}
+
+
+Will parse through the commandline arguments looking for errors. 
+
+Takes in the argc and argv from the commandline and checks for invalid combinations. This includes flags not being followed by correct number of arguments and/or being given the wrong type of argument.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number of arguments in argv \\
+\hline
+{\em argv} & commandline arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If there were no errors found 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!is\+\_\+valid\+\_\+image\+\_\+file@{is\+\_\+valid\+\_\+image\+\_\+file}}
+\index{is\+\_\+valid\+\_\+image\+\_\+file@{is\+\_\+valid\+\_\+image\+\_\+file}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid\+\_\+image\+\_\+file(const std\+::string \&name)}{is_valid_image_file(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::is\+\_\+valid\+\_\+image\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_ab9049b7cd3d1e80d83a08908c078b2c5}{}\label{classimage__tools_1_1MIACommandlineManager_ab9049b7cd3d1e80d83a08908c078b2c5}
+
+
+Will determine if this is an existing file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if file exists, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name@{is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name}}
+\index{is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name@{is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name(const std\+::string \&name)}{is_valid_image_file_name(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::is\+\_\+valid\+\_\+image\+\_\+file\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_a25c93b7f74b68fb88586065d7ea3dffe}{}\label{classimage__tools_1_1MIACommandlineManager_a25c93b7f74b68fb88586065d7ea3dffe}
+
+
+Will determine if this is a valid file name so it can be created or edited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if valid file name, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!parse@{parse}}
+\index{parse@{parse}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{parse(int argc, char $\ast$$\ast$argv)}{parse(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::parse (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1MIACommandlineManager_ad6bc053325dbe81667f85667dd1fdbf9}{}\label{classimage__tools_1_1MIACommandlineManager_ad6bc053325dbe81667f85667dd1fdbf9}
+
+
+Will check and perform all of the requested actions from commandline arguments. 
+
+This will check for any invalid input within the commandline arguments. Then will perform all flags in order given. If there are any problems such as no files valid files found when trying to find a sequence of files, it will return 1 otherwise 0.
+
+The one exception to this is if the -\/compare flag is chosen. This will compare two files. If these two are identical then return 1 otherwise return 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number of arguments in argv \\
+\hline
+{\em argv} & commandline arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 or 0 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!perform\+\_\+flags@{perform\+\_\+flags}}
+\index{perform\+\_\+flags@{perform\+\_\+flags}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{perform\+\_\+flags(int argc, char $\ast$$\ast$argv)}{perform_flags(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::perform\+\_\+flags (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_aae4bae8a16d283fdc81a50f7bf9fb415}{}\label{classimage__tools_1_1MIACommandlineManager_aae4bae8a16d283fdc81a50f7bf9fb415}
+
+
+Will perform all of the requested actions from commandline arguments. 
+
+This will perform all flags in order given. If there are any problems such as no files valid files found when trying to find a sequence of files, it will return 1 otherwise 0.
+
+The one exception to this is if the -\/compare flag is chosen. This will compare two files. If these two are identical then return 1 otherwise return 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number of arguments in argv \\
+\hline
+{\em argv} & commandline arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 or 0 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}!usage@{usage}}
+\index{usage@{usage}!image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager@{image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager}}
+\subsubsection[{\texorpdfstring{usage(const std\+::string \&err)}{usage(const std::string &err)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+M\+I\+A\+Commandline\+Manager\+::usage (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{err}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACommandlineManager_a6dfb9e4962301d2860e7e5d878c85e83}{}\label{classimage__tools_1_1MIACommandlineManager_a6dfb9e4962301d2860e7e5d878c85e83}
+
+
+Will print out Usage statement and error (if any) that caused the usage statement to be printed out. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/app/\+M\+I\+A/src/mia\+\_\+commandline\+\_\+manager.\+h\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/app/\+M\+I\+A/src/mia\+\_\+commandline\+\_\+manager.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{classimage__tools_1_1FQuantize}{}\section{image\+\_\+tools\+:\+:F\+Quantize Class Reference}
+\label{classimage__tools_1_1FQuantize}\index{image\+\_\+tools\+::\+F\+Quantize@{image\+\_\+tools\+::\+F\+Quantize}}
+
+
+Implements a quantization filter.  
+
+
+
+
+{\ttfamily \#include $<$f\+\_\+quantize.\+h$>$}
+
+
+
+Inherits \hyperlink{classimage__tools_1_1Filter}{image\+\_\+tools\+::\+Filter}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FQuantize_a449e80031ef13d39fc29c8d2a450a4bb}{F\+Quantize} (int bins)\hypertarget{classimage__tools_1_1FQuantize_a449e80031ef13d39fc29c8d2a450a4bb}{}\label{classimage__tools_1_1FQuantize_a449e80031ef13d39fc29c8d2a450a4bb}
+
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FQuantize_a85066b63bff848dd4320501a3b79c7d6}{Generate\+Pixel} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&buffer, int x, int y) const \hypertarget{classimage__tools_1_1FQuantize_a85066b63bff848dd4320501a3b79c7d6}{}\label{classimage__tools_1_1FQuantize_a85066b63bff848dd4320501a3b79c7d6}
+
+\begin{DoxyCompactList}\small\item\em generate pixel \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classimage__tools_1_1FQuantize_a5378d59c5c3d85066a69eb05f138a56d}{bins\+\_\+}\hypertarget{classimage__tools_1_1FQuantize_a5378d59c5c3d85066a69eb05f138a56d}{}\label{classimage__tools_1_1FQuantize_a5378d59c5c3d85066a69eb05f138a56d}
+
+\begin{DoxyCompactList}\small\item\em The number of categories (bins) to quantize pixels into based on their value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a quantization filter. 
+
+Reduce the amount of information comprising an image by sorting each pixel into one of n predefined bins that cover the full range of R\+GB (0.\+0-\/1.\+0). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/lib/libimgtools/src/f\+\_\+quantize.\+h\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/lib/libimgtools/src/f\+\_\+quantize.\+cc\end{DoxyCompactItemize}

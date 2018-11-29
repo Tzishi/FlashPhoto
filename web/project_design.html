@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Our Design Document </title>
+	<link class = "page" rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+
+	<div class="content">
+		<nav>
+			<a href="index.html" class = "page"> Home </a> |
+			<a href="usersupport.html" class = "page"> User Support </a> |
+			<a href="developersupport.html" class = "page"> Developer Support</a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1>Project Design</h1>
+	<div class="content">
+	<p>
+		<b>FlashPhoto folder</b>
+			<li>main.cc</li>
+			<li>flashphoto_app.cc</li>
+			<li>flashphoto_app.h</li>
+			<li>fl_filter_manager.cc</li>
+			<li>fl_filter_manager.h</li>
+			<li>fl_io_manager.cc</li>
+			<li>fl_io_manager.h</li>
+			<li>tool_factory.cc</li>
+			<li>tool_factory.h</li>
+	</p>
+	<p>
+		<b>MIA folder</b>
+			<li>main.cc</li>
+			<li>mia_app.cc</li>
+			<li>mia_app.h</li>
+			<li>mia_commandline_manager.cc</li>
+			<li>mia_commandline_manager.h</li>
+			<li>mia_filter_manager.cc</li>
+			<li>mia_filter_manager.h</li>
+			<li>mia_io_manager.cc</li>
+			<li>mia_io_manager.h</li>
+			<li>tool_factory.cc</li>
+			<li>tool_factory.h</li>
+	</p>
+	<p>
+	The requirement for the refactor is libimgtools.a holds all code shared by the two apps, and each app’s src folders hold code only specific to that app. There are two ways to do that. The first way is doing that literally which means libimgtools.a contains only common functionalities between flashphoto and MIA. The second way is including all possible functionalities in libimgtools.a, and let flashphoto and MIA manage those code in distinct ways. In the first way, libimgtool.a contains less files, but that may lead to several problems. Firstly, it is like a hardcoded way. Applications can only have the functionalities when they are created. Extending applications will become very hard. Secondly, it increases the complexity of our program. We need to figure which part is need or not. Once the requirement is changed, we need to refactor again from the scratch. So we put all functionalities in libimgtools.a to avoid those shortcomings. 
+	</p>
+	<p>
+	Since given code has a really good structure and never mixes abstraction levels, we just need to define the code which manages the functionalities. Managers like io_manager and filter_manager is exactly what we need. They don’t add new things to applications but define what applications can do. Consider Tool, it is simpler than IO and Filter. Since the applications have a Tool attribute, tool_factory acts like a manager. Creating a Tool manager would be overkill. flashphoto_app and mia_app is the base of two application, so they should be file in src folders. mia_commandline_manager is written particularly for mia. Finally, two applications should have two main.cc. So above are reasons for our overall design.
+	</p>
+	</div>
+
+	<div class = "footer">
+		<!-- You can change the copyright! -->
+		<span class="copyright">&copy; 2015, CSCI 3081 Guru</span>
+	</div>
+
+
+</body>
+</html>

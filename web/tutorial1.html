@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset = "utf-8">
+
+	<title>Converting and Segmenting a CT Scan Using Mia</title>
+
+	<link class = "page" rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+
+       
+	<div class="content">
+
+		<nav>
+
+			<a href="index.html" class = "page"> Home </a> |
+			<a href="usersupport.html" class = "page"> User Support </a> |
+			<a href="developersupport.html" class = "page"> Developer Support</a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1>Converting and Segmenting a CT Scan Using Mia</h1>
+	<div class="content">
+		<h2>Using GUI</h2>
+		<h3>1. Go to Iteration3 directory</h3>
+		<p>First cd into your directory that holds Iteration3.  This will be different for every person. Go to the </p>
+		<p><b>cd /home/padil031/CSCI3081/group-repo/project/iteration3/</b></p>
+		<h3>2. Run application</h3>
+		<p><b>./build/MIA/bin/MIA</b></p>
+		<h3>3. Navigate to CT Scan Directory</h3>
+		<p>Under the section called Image I/O follow navigate to CT scans, Then pick the first one chronilogically. For us this mrbrain-8bit001.png</p>
+		<img src="p1.png" </img>
+		<img src="p2.png" </img>
+		<img src="p3.png" </img>
+		<img src="p4.png" </img>
+		<h3>4. Click the Load Canvas button.</h3>
+		<img src="p5.png" </img>
+		<h3>5. Adjust Blur amount and Click Apply</h3>
+		<img src="p6.png" </img>
+		<h3>5. Adjust Quantize to 4 amount and Click Apply</h3>
+		<img src="p7.png" </img>
+		<h3>6. Navigate to desired output</h3>
+		<img src="p8.png" </img>
+		<img src="p9.png" </img>
+		<h3>7. Click Save Canvas </h3>
+		<img src="p10.png" </img>
+		<h3>8. Navigate back</h3>
+		<img src="p11.png" </img>
+		<img src="p3.png" </img>
+		<h3>9. Click Next Image</h3>
+		<img src="p12.png" </img>
+		<h3>10. Repeat Steps 5-9 until you run out of images</h3>
+	</div>
+	<div class="content">
+		<h2>Command Line Mode</h2>
+		<h3>1. Go to Iteration3 directory</h3>
+		<p>First cd into your directory that holds Iteration3.  This will be different for every person. Go to the </p>
+		<p><b>cd /home/padil031/CSCI3081/group-repo/project/iteration3/</b></p>
+		<h3>2. Run the following command</h3>
+		<p>After in the directory you will be ready to run the command 
+			to modify the CT scans.  Note: Remember that the output 
+			directory for the modified scans must exist.  If you have 
+			not made the directory simply run mkdir &lt;path/dirname&gt;.  
+			The command will take form of: <b>./build/MIA/bin/MIA &lt;path 
+			to scan dir&gt;&lt;scan name - ending numbers&gt;###.&lt;file extension&gt; 
+			-blur &lt;amount to blur&gt; -quantize 4 &lt;path to scan output 
+			directory&gt;&lt;output scan name - ending numbers&gt;###.&lt;file extension&gt;</b></p>
+		<p><b>./build/MIA/bin/MIA resources/test-images/brainstack/mrbrain-8bit###.png -blur 5.0 -quantize 4 resources/test-images/brainstack-modified/mrbrain-8bit###
+		.png</b></p>
+		
+	</div>
+	<div class = "footer">
+		<!-- You can change the copyright! -->
+		<span class="copyright">&copy; 2015, CSCI 3081 Guru</span>
+	</div>
+
+
+</body>
+</html>

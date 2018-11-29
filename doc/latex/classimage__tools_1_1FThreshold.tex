@@ -1,0 +1,44 @@
+\hypertarget{classimage__tools_1_1FThreshold}{}\section{image\+\_\+tools\+:\+:F\+Threshold Class Reference}
+\label{classimage__tools_1_1FThreshold}\index{image\+\_\+tools\+::\+F\+Threshold@{image\+\_\+tools\+::\+F\+Threshold}}
+
+
+A threshold filter.  
+
+
+
+
+{\ttfamily \#include $<$f\+\_\+threshold.\+h$>$}
+
+
+
+Inherits \hyperlink{classimage__tools_1_1Filter}{image\+\_\+tools\+::\+Filter}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FThreshold_a999a5dfc3f95d147b4030789ebb77931}{F\+Threshold} (float threshold)\hypertarget{classimage__tools_1_1FThreshold_a999a5dfc3f95d147b4030789ebb77931}{}\label{classimage__tools_1_1FThreshold_a999a5dfc3f95d147b4030789ebb77931}
+
+\begin{DoxyCompactList}\small\item\em threshold constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FThreshold_a39d2402969ac038c7ab132f68a754637}{Generate\+Pixel} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&buffer, int x, int y) const \hypertarget{classimage__tools_1_1FThreshold_a39d2402969ac038c7ab132f68a754637}{}\label{classimage__tools_1_1FThreshold_a39d2402969ac038c7ab132f68a754637}
+
+\begin{DoxyCompactList}\small\item\em generate pixel \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classimage__tools_1_1FThreshold_aa6cad820a5bfbdc61f38e34aca51018e}{threshold\+\_\+}\hypertarget{classimage__tools_1_1FThreshold_aa6cad820a5bfbdc61f38e34aca51018e}{}\label{classimage__tools_1_1FThreshold_aa6cad820a5bfbdc61f38e34aca51018e}
+
+\begin{DoxyCompactList}\small\item\em threshold amount \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A threshold filter. 
+
+The effect of this filter is to set the R\+GB components of all pixels that it operates on to 1 if the R\+GB value is greater than the threshold, and 0 otherwise. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/lib/libimgtools/src/f\+\_\+threshold.\+h\item 
+/home/asmir001/aa/repo-\/group-\/\+B01/project/iteration3/src/lib/libimgtools/src/f\+\_\+threshold.\+cc\end{DoxyCompactItemize}
